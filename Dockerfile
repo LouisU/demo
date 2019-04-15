@@ -1,6 +1,6 @@
 FROM centos:latest
 RUN yum install -y zlib-devel bzip2-devel openssl-devel ncurses-devel wget \
-sqlite-devel readline-devel tk-devel gcc make libffi-devel mysql-devel httpd \
+sqlite-devel readline-devel tk-devel gcc make libffi-devel mysql-devel httpd mod_wsgi \
 && wget https://www.python.org/ftp/python/3.7.3/Python-3.7.3.tgz \
 && tar -zxvf Python-3.7.3.tgz \
 && cd Python-3.7.3 \
