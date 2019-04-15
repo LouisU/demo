@@ -8,8 +8,9 @@ sqlite-devel readline-devel tk-devel gcc make libffi-devel mysql-devel httpd mod
 && make&&make install \
 && ln -s /usr/local/bin/python3 /usr/bin/python3 \
 && ln -s /usr/local/bin/pip3 /usr/bin/pip
-WORKDIR ~/.pip
-RUN touch pip.conf \
+RUN mkdir ~/.pip \
+&& cd ~/.pip \
+&& touch pip.conf \
 && echo "#" > pip.conf \
 && sed -i '1a [global]' pip.conf \
 && sed -i '2a timeout = 60' pip.conf \
