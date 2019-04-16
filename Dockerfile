@@ -4,7 +4,7 @@ sqlite-devel readline-devel tk-devel gcc make libffi-devel mysql-devel httpd mod
 && wget https://www.python.org/ftp/python/3.7.3/Python-3.7.3.tgz \
 && tar -zxvf Python-3.7.3.tgz \
 && cd Python-3.7.3 \
-&& ./configure \
+&& ./configure --prefix=/usr/local --enable-shared\
 && make&&make install \
 && ln -s /usr/local/bin/python3 /usr/bin/python3 \
 && ln -s /usr/local/bin/pip3 /usr/bin/pip
