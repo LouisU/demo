@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework.authtoken import views
 from rest_framework_jwt.views import obtain_jwt_token
-# from students.views_base import StudentsListView  # 为了演示django自带的view的功能
+# from students.views_base import StudentsListView  # 演示django自带的view的功能
 # from students.views import StudentsListView
 
 ########
@@ -52,7 +52,7 @@ urlpatterns = [
     # path(r'xadmin/', include(xadmin.site.urls)),
     # path('students/', student_list),
     path(r'', include(router.urls)),
-    path('docs/', include_docs_urls(title='智慧平安校园')),
+    path('docs/', include_docs_urls(title='小demo')),
 
     # drf自带的Token认证， 缺点1. 没有过期机制 2. 需要在服务器和数据库交换才能拿到用户信息。
     # path(r'api-token-auth/', views.obtain_auth_token),
